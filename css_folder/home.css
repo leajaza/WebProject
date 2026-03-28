@@ -1,0 +1,360 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: url("../images/hero_background.png") no-repeat center right/cover;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 550px;
+    padding-left: 15px;
+}
+
+.hero-subtitle {
+    color: var(--soft-blue);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-description {
+    color: var(--text-medium);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: 1000px;
+    font-weight: 700;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--deep-blue);
+    border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-section);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--deep-blue);
+}
+
+.btn-outline-light {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading.center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.section-tag.light {
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--white);
+}
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.section-heading p,
+.intro-content p {
+    color: var(--text-medium);
+}
+
+.intro {
+    background: var(--white);
+}
+
+.intro-content {
+    max-width: 850px;
+    text-align: center;
+}
+
+.therapists {
+    background: var(--bg-main);
+}
+
+.therapist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.therapist-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.therapist-card:hover {
+    transform: translateY(-8px);
+}
+
+.therapist-image {
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.therapist-img-1 {
+    background: url("../images/dr_sarah_profile.png") no-repeat center/cover;
+}
+
+.therapist-img-2 {
+    background: url("../images/dr_omar_profile.png") no-repeat center/cover;
+}
+
+.therapist-img-3 {
+    background: url("../images/dr_lina_profile.png") no-repeat center/cover;
+}
+
+.therapist-info {
+    padding: 24px;
+}
+
+.therapist-info h3 {
+    margin-bottom: 8px;
+}
+
+.specialty {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--lavender);
+    font-weight: 700;
+}
+
+.therapist-info p {
+    color: var(--text-medium);
+    margin-bottom: 16px;
+}
+
+.card-link {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.card-link:hover {
+    color: var(--deep-blue);
+}
+
+.why-choose-us {
+    background: var(--bg-section);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 28px 22px;
+    border-radius: var(--radius-md);
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: var(--deep-blue);
+}
+
+.feature-card p {
+    color: var(--text-medium);
+}
+
+.cta {
+    background: linear-gradient(135deg, #2c5f8a, #4a90e2, #8b7fd9);
+    color: var(--white);
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-content h2 {
+    margin-bottom: 12px;
+}
+
+.cta-content p {
+    max-width: 620px;
+    opacity: 1;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+@media (max-width: 992px) {
+
+    .hero-content,
+    .cta-content {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-description,
+    .hero-text h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .therapist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+
+    background: url("../images/hero_background.png") no-repeat center center;
+    background-size: cover;
+  }
+    .hero-text {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .therapist-grid,
+    .features-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 92%;
+    }
+}

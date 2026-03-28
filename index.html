@@ -1,15 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukoon Home</title>
+  <link rel="stylesheet" href="css_folder/home.css">
+  <link rel="stylesheet" href="css_folder/style.css">
+  <script src="javascript_folder/main.js" defer></script>
 </head>
+
 <body>
-    <h1>web</h1>
-    <h2>welcome</h2>
-    
+  <header class="navbar">
+    <div class="container nav-container">
+
+
+      <div class="logo">
+        <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
+        <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
+      </div>
+
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="">Therapists</a>
+        <a href="">Find Your Match</a>
+        <a href="">Booking</a>
+        <a href="">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle">
+        <img src="images/hamburger_icon.png" alt="Click here">
+      </button>
+
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <p class="hero-subtitle">Support for your well-being</p>
+
+        <h1>Find the Right Therapist For You</h1>
+
+        <p class="hero-description">
+          Discover compassionate mental health support tailored to your needs.
+          Browse trusted therapists, take a matching quiz, and book sessions with confidence.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Take the Match Quiz</a>
+          <a href="#" class="btn btn-secondary">Browse Therapists</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="intro section-padding">
+    <div class="container intro-content">
+      <div class="section-heading">
+        <span class="section-tag">About Sukoon</span>
+        <h2>Mental health support made simpler</h2>
+      </div>
+      <p>
+        At Sukoon, we believe finding mental health support should feel safe,
+        welcoming, and easy. Our platform helps users explore therapist
+        profiles, understand specialties, and book sessions that match their
+        personal needs and preferences.
+      </p>
+    </div>
+  </section>
+
+  <section class="therapists section-padding">
+    <div class="container">
+      <div class="section-heading center">
+        <span class="section-tag">Featured Therapists</span>
+        <h2>Meet a few of our trusted professionals</h2>
+        <p>
+          Explore experienced therapists with different specialties and
+          approaches to care.
+        </p>
+      </div>
+
+      <div class="therapist-grid">
+        <div class="therapist-card">
+          <div class="therapist-image therapist-img-1"></div>
+          <div class="therapist-info">
+            <h3>Dr. Sarah Ahmed</h3>
+            <span class="specialty">Anxiety & Stress Management</span>
+            <p>
+              Helping young adults and professionals manage anxiety, burnout,
+              and emotional stress with practical and supportive care.
+            </p>
+            <a href="#" class="card-link">View Profile</a>
+          </div>
+        </div>
+
+        <div class="therapist-card">
+          <div class="therapist-image therapist-img-2"></div>
+          <div class="therapist-info">
+            <h3>Dr. Omar Hassan</h3>
+            <span class="specialty">Family & Relationship Therapy</span>
+            <p>
+              Specializes in communication challenges, family dynamics, and
+              relationship concerns in both online and in-person sessions.
+            </p>
+            <a href="#" class="card-link">View Profile</a>
+          </div>
+        </div>
+
+        <div class="therapist-card">
+          <div class="therapist-image therapist-img-3"></div>
+          <div class="therapist-info">
+            <h3>Dr. Lina Kareem</h3>
+            <span class="specialty">Depression & Emotional Support</span>
+            <p>
+              Focused on creating a calm and supportive environment for clients
+              dealing with low mood, emotional overwhelm, and life transitions.
+            </p>
+            <a href="#" class="card-link">View Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="why-choose-us section-padding">
+    <div class="container">
+      <div class="section-heading center">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Care that feels accessible, safe, and supportive</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/calender_icon.png" alt="">
+          </div>
+          <h3>Easy Booking</h3>
+          <p>
+            Quickly schedule sessions through a simple and user-friendly booking
+            experience.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/dr_icon.png" alt="">
+          </div>
+          <h3>Qualified Therapists</h3>
+          <p>
+            Browse therapist profiles with specialties, experience, and session
+            details.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/meeting_icon.png" alt="">
+          </div>
+          <h3>Online & In-Person</h3>
+          <p>
+            Choose the session format that feels most comfortable and practical
+            for you.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src="images/environment_icon.png" alt="">
+          </div>
+          <h3>Safe Environment</h3>
+          <p>
+            Designed to make users feel reassured, supported, and guided every
+            step of the way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta section-padding">
+    <div class="container cta-content">
+      <div>
+        <span class="section-tag light">Take the first step</span>
+        <h2>Ready to find your best therapist match?</h2>
+        <p>
+          Start with our matching quiz or book directly with a therapist that
+          feels right for you.
+        </p>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="#" class="btn btn-light">Take Quiz</a>
+        <a href="#" class="btn btn-outline-light">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Sukoon</h3>
+        <p>
+          A calm and accessible platform designed to help users connect with the
+          right therapist.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="">Therapists</a>
+        <a href="">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Email: support@sukoon.com</p>
+        <p>Phone: +961 70 123 456</p>
+        <p>Location: Beirut, Lebanon</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sukoon. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
