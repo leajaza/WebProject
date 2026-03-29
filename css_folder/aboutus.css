@@ -1,4 +1,4 @@
-* {
+/* * {
 
     margin: 0;
     padding: 0;
@@ -72,7 +72,7 @@ body {
     background: none;
     border: none;
     color: white;
-}
+} */
 
 .page-banner {
     background: linear-gradient(90deg, #6A85C8, #4FB3BF);
@@ -235,7 +235,7 @@ body {
     color: white;
 }
 
-.footer {
+/* .footer {
     background: #2E3A3F;
     color: #F8FAFB;
     padding: 40px 0;
@@ -266,7 +266,7 @@ body {
     margin-top: 20px;
     border-top: 1px solid #6B7C85;
     padding-top: 10px;
-}
+} */
 
 @media (max-width: 900px) {
 
