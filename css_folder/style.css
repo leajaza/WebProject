@@ -211,3 +211,49 @@ img {
     color: var(--lavender);
     margin-left: 5px;
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  border-radius: 1000px;
+  font-weight: 700;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--deep-blue);
+  border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-section);
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--deep-blue);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
