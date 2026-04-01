@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapists | Sukoon سكون</title>
+    <link rel="stylesheet" href="css_folder/style.css">
+    <link rel="stylesheet" href="css_folder/therapists.css">
+     <script src="javascript_folder/main.js" defer></script>
+    <script src="javascript_folder/therapists.js" defer></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+
+
+            <div class="logo">
+                <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
+                <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
+            </div>
+
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About</a>
+                <a href="therapists.html">Therapists</a>
+                <a href="#">Find Your Match</a>
+                <a href="#">Booking</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                <img src="images/hamburger_icon.png" alt="Click here">
+            </button>
+
+        </div>
+    </header>
+
+    <section class="therapists-page-heading">
+        <div class="container">
+            <span class="section-tag">Our Professionals</span>
+            <h1>Meet Our Therapists</h1>
+            <p>
+                Browse our therapists, explore their specialties, and find the support
+                that feels right for you.
+            </p>
+        </div>
+    </section>
+
+    <section class="therapists-page section-padding">
+        <div class="container">
+            <div class="filter-box">
+                <div class="filter-group">
+                    <label for="searchName">Search by name</label>
+                    <input type="text" id="searchName" placeholder="Type a therapist name">
+                </div>
+
+                <div class="filter-group">
+                    <label for="sessionFilter">Session type</label>
+                    <select id="sessionFilter">
+                        <option value="all">All Session Types</option>
+                        <option value="online">Online</option>
+                        <option value="in-person">In-Person</option>
+                        <option value="both">Online & In-Person</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    <div class="therapists-list" id="therapistsList">
+  <div class="therapist-page-card" data-name="sarah ahmed" data-session="both">
+    <div class="therapist-page-image therapist-page-img-1"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Sarah Ahmed</h3>
+      <p class="therapist-page-specialty">Anxiety & Stress Management</p>
+      <div class="therapist-page-meta">
+        <span>7 Years Experience</span>
+        <span>Online & In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Supports young adults and professionals dealing with anxiety, burnout, and emotional stress.
+      </p>
+      <a href="dr-sarah-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="omar hassan" data-session="both">
+    <div class="therapist-page-image therapist-page-img-2"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Omar Hassan</h3>
+      <p class="therapist-page-specialty">Family & Relationship Therapy</p>
+      <div class="therapist-page-meta">
+        <span>10 Years Experience</span>
+        <span>Online & In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Helps individuals and families improve communication and work through relationship challenges.
+      </p>
+      <a href="dr-omar-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="lina kareem" data-session="online">
+    <div class="therapist-page-image therapist-page-img-3"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Lina Kareem</h3>
+      <p class="therapist-page-specialty">Depression & Emotional Support</p>
+      <div class="therapist-page-meta">
+        <span>8 Years Experience</span>
+        <span>Online</span>
+      </div>
+      <p class="therapist-page-description">
+        Creates a supportive space for clients experiencing low mood, overwhelm, and life transitions.
+      </p>
+      <a href="dr-lina-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="maya khoury" data-session="in-person">
+    <div class="therapist-page-image therapist-page-img-4"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Maya Khoury</h3>
+      <p class="therapist-page-specialty">Trauma & Healing</p>
+      <div class="therapist-page-meta">
+        <span>9 Years Experience</span>
+        <span>In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Works with clients processing grief, trauma, and difficult emotional experiences.
+      </p>
+      <a href="dr-maya-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="youssef nader" data-session="online">
+    <div class="therapist-page-image therapist-page-img-5"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Youssef Nader</h3>
+      <p class="therapist-page-specialty">Self-Esteem & Personal Growth</p>
+      <div class="therapist-page-meta">
+        <span>6 Years Experience</span>
+        <span>Online</span>
+      </div>
+      <p class="therapist-page-description">
+        Supports clients in building confidence, emotional resilience, and healthier habits.
+      </p>
+      <a href="dr-youssef-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="rana saleh" data-session="both">
+    <div class="therapist-page-image therapist-page-img-6"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Rana Saleh</h3>
+      <p class="therapist-page-specialty">Teen & Student Support</p>
+      <div class="therapist-page-meta">
+        <span>5 Years Experience</span>
+        <span>Online & In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Helps teens and students manage stress, academic pressure, and emotional challenges.
+      </p>
+      <a href="dr-rana-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="nour habib" data-session="online">
+    <div class="therapist-page-image therapist-page-img-7"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Nour Habib</h3>
+      <p class="therapist-page-specialty">Anxiety & Panic Support</p>
+      <div class="therapist-page-meta">
+        <span>7 Years Experience</span>
+        <span>Online</span>
+      </div>
+      <p class="therapist-page-description">
+        Helps clients understand anxiety triggers and build practical coping strategies.
+      </p>
+      <a href="dr-nour-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="karim saad" data-session="in-person">
+    <div class="therapist-page-image therapist-page-img-8"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Karim Saad</h3>
+      <p class="therapist-page-specialty">Couples Counseling</p>
+      <div class="therapist-page-meta">
+        <span>11 Years Experience</span>
+        <span>In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Works with couples on communication, trust, conflict, and emotional connection.
+      </p>
+      <a href="dr-karim-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="dina farah" data-session="both">
+    <div class="therapist-page-image therapist-page-img-9"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Dina Farah</h3>
+      <p class="therapist-page-specialty">Women’s Emotional Wellness</p>
+      <div class="therapist-page-meta">
+        <span>8 Years Experience</span>
+        <span>Online & In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Supports women through stress, burnout, self-worth issues, and life transitions.
+      </p>
+      <a href="dr-dina-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="hadi nasr" data-session="online">
+    <div class="therapist-page-image therapist-page-img-10"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Hadi Nasr</h3>
+      <p class="therapist-page-specialty">Stress & Burnout Recovery</p>
+      <div class="therapist-page-meta">
+        <span>6 Years Experience</span>
+        <span>Online</span>
+      </div>
+      <p class="therapist-page-description">
+        Helps working professionals manage exhaustion, pressure, and emotional fatigue.
+      </p>
+      <a href="dr-hadi-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="salma raad" data-session="both">
+    <div class="therapist-page-image therapist-page-img-11"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Salma Raad</h3>
+      <p class="therapist-page-specialty">Child & Parent Guidance</p>
+      <div class="therapist-page-meta">
+        <span>9 Years Experience</span>
+        <span>Online & In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Supports children and parents with emotional regulation, behavior, and family adjustment.
+      </p>
+      <a href="dr-salma-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+
+  <div class="therapist-page-card" data-name="ziad moukarzel" data-session="in-person">
+    <div class="therapist-page-image therapist-page-img-12"></div>
+    <div class="therapist-page-info">
+      <h3>Dr. Ziad Moukarzel</h3>
+      <p class="therapist-page-specialty">Grief & Life Adjustment</p>
+      <div class="therapist-page-meta">
+        <span>12 Years Experience</span>
+        <span>In-Person</span>
+      </div>
+      <p class="therapist-page-description">
+        Helps clients navigate loss, grief, and major life changes with steady support.
+      </p>
+      <a href="dr-ziad-profile.html" class="btn btn-primary">View Profile</a>
+    </div>
+  </div>
+</div>
+
+        <p class="no-results" id="noResults">No therapists match your search.</p>
+        </div>
+    </section>
+
+ <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Sukoon</h3>
+        <p>
+          A calm and accessible platform designed to help users connect with the
+          right therapist.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Therapists</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Email: support@sukoon.com</p>
+        <p>Phone: +961 70 123 456</p>
+        <p>Location: Beirut, Lebanon</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sukoon. All rights reserved.</p>
+    </div>
+  </footer>
+
+   
+</body>
+
+</html>

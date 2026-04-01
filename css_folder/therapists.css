@@ -1,0 +1,249 @@
+
+.therapists-page-heading {
+  padding: 70px 0 30px;
+  background: linear-gradient(180deg, var(--bg-section), var(--bg-main));
+  text-align: center;
+}
+
+.therapists-page-heading h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.therapists-page-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-medium);
+}
+
+.filter-box {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.filter-group {
+  text-align: center;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--deep-blue);
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  text-align: center;
+  padding: 14px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: var(--white);
+  outline: none;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: var(--primary-blue);
+}
+
+.therapists-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.therapists-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.therapist-page-card {
+  width: 100%;
+  padding: 0px 150px;
+}
+
+.therapist-page-card:hover {
+  transform: translateY(-8px);
+}
+
+.therapist-page-image {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+}
+
+.therapist-page-img-1 {
+  background: url("../images/dr_sara.png") no-repeat center/cover;
+}
+
+.therapist-page-img-2 {
+  background: url("../images/dr_omar.png") no-repeat center/cover;
+}
+
+.therapist-page-img-3 {
+  background: url("../images/dr_lina.png") no-repeat center/cover;
+}
+
+.therapist-page-img-4 {
+  background: url("../images/dr_maya.png") no-repeat center/cover;
+}
+
+.therapist-page-img-5 {
+  background: url("../images/dr_youssef.png") no-repeat center/cover;
+}
+
+.therapist-page-img-6 {
+  background: url("../images/dr_rana.png") no-repeat center/cover;
+}
+
+.therapist-page-img-7 {
+  background: url("../images/dr_nour.png") no-repeat center/cover;
+}
+
+.therapist-page-img-8 {
+  background: url("../images/dr_karim.png") no-repeat center/cover;
+}
+
+.therapist-page-img-9 {
+  background: url("../images/dr_dina.png") no-repeat center/cover;
+}
+
+.therapist-page-img-10 {
+  background: url("../images/dr_hadi.png") no-repeat center/cover;
+}
+
+.therapist-page-img-11 {
+  background: url("../images/dr_salma.png") no-repeat center/cover;
+}
+
+.therapist-page-img-12 {
+  background: url("../images/dr_ziad.png") no-repeat center/cover;
+}
+
+.therapist-page-info {
+  padding: 24px;
+}
+
+.therapist-page-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.therapist-page-specialty {
+  color: var(--lavender);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.therapist-page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.therapist-page-meta span {
+  background: var(--bg-section);
+  color: var(--deep-blue);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.therapist-page-description {
+  color: var(--text-medium);
+  margin-bottom: 20px;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  color: var(--text-medium);
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+@media (max-width: 992px) {
+  .filter-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .therapists-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .therapist-page-card {
+    padding: 0px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .therapists-page-heading {
+    padding: 50px 0 20px;
+  }
+
+  .filter-box {
+    max-width: 400px;
+    grid-template-columns: 1fr;
+  }
+
+  .therapists-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .therapist-page-card {
+    padding: 0;
+  }
+
+  .therapist-page-image {
+    height: 280px;
+    width: 100%;
+  }
+
+  .therapist-page-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-box {
+    max-width: 100%;
+  }
+
+  .therapist-page-image {
+    height: 240px;
+  }
+
+  .therapist-page-info {
+    padding: 18px;
+  }
+
+  .therapist-page-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .therapist-page-meta {
+    gap: 8px;
+  }
+
+  .therapist-page-meta span {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+}
