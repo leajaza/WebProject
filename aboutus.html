@@ -4,131 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us Sukoon</title>
-   <link rel="stylesheet" href="css_folder/aboutus.css">
-  <link rel="stylesheet" href="css_folder/style.css">
+    <link rel="stylesheet" href="css_folder/aboutus.css">
+    <link rel="stylesheet" href="css_folder/style.css">
+    <script src="javascript_folder/main.js" defer></script>
 </head>
 <body>
-     <header class="navbar">
+
+<header class="navbar">
     <div class="container nav-container">
 
-
-      <div class="logo">
-        <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
-        <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
-      </div>
-
-
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About</a>
-        <a href="therapists.html">Therapists</a>
-        <a href="">Find Your Match</a>
-        <a href="">Booking</a>
-        <a href="">Contact</a>
-      </nav>
-
-      <button class="menu-toggle" id="menuToggle">
-        <img src="images/hamburger_icon.png" alt="Click here">
-      </button>
-
-    </div>
-  </header>
-
-    <section class="page-banner">
-        <div class="container">
-            <h1>About Us</h1>
-            <p>Learn more about Sukoon and our purpose in supporting mental wellness.</p>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
+            <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
         </div>
-    </section>
 
- <section class="about-section">
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="">Therapists</a>
+            <a href="">Find Your Match</a>
+            <a href="">Booking</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle">
+            <img src="images/hamburger_icon.png" alt="Click here">
+        </button>
+
+    </div>
+</header>
+
+<section class="page-banner">
     <div class="container">
-    <div class="section-heading">
-        <h2>About Sukoon</h2>
-        <p> Sukoon is a student project designed to help users connect with therapists in a simple,
-          comfortable, and supportive way. The platform allows users to explore therapist profiles,
-          take a matching quiz, and book sessions more easily. 
+        <h1>About Us</h1>
+        <p>
+            Sukoon is a digital mental health platform designed to help users explore therapists,
+            find the right match, and access support through a calm, simple, and user-friendly experience.
         </p>
-   </div>
+    </div>
+</section>
 
-   <div class="about-grid">
-    <div class="about-card">
-        <h3>Who We Are</h3>
-        <p>  We are building a platform focused on making the search for mental health support feel
-            easier, safer, and more personal. Sukoon was created to provide a calm and user-friendly
-            experience for anyone looking for guidance and emotional support.
-        </p>
-    </div>
+<section class="about-section">
+    <div class="container">
+        <div class="about-showcase">
 
-    <div class="about-card">
-        <h3>Our Mission</h3>
-        <p> Our mission is to help users connect with the right therapist based on their needs,
-            preferences, and comfort. We want the process of finding help to feel clear and
-            approachable.
-        </p>
+            <div class="about-tabs">
+                <button type="button" class="about-tab active" data-target="vision">
+                    <span class="tab-number">01</span>
+                    <div class="tab-text">
+                        <h3>Our Vision</h3>
+                        <p>Accessible and welcoming support</p>
+                    </div>
+                </button>
+
+                <button type="button" class="about-tab" data-target="mission">
+                    <span class="tab-number">02</span>
+                    <div class="tab-text">
+                        <h3>Our Mission</h3>
+                        <p>Connecting users with the right therapist</p>
+                    </div>
+                </button>
+
+                <button type="button" class="about-tab" data-target="purpose">
+                    <span class="tab-number">03</span>
+                    <div class="tab-text">
+                        <h3>Our Purpose</h3>
+                        <p>A calmer and simpler therapy journey</p>
+                    </div>
+                </button>
+            </div>
+
+            <div class="about-panels">
+                <div class="about-panel active" id="vision">
+                    <span class="panel-badge">Our Vision</span>
+                    <h3>Making mental health support feel more accessible, calm, and human.</h3>
+                    <p>
+                        Our vision is to create a platform where seeking support feels welcoming
+                        rather than overwhelming. Sukoon aims to simplify the journey of finding
+                        the right therapist through an experience that feels reassuring, modern,
+                        and easy to trust.
+                    </p>
+                </div>
+
+                <div class="about-panel" id="mission">
+                    <span class="panel-badge">Our Mission</span>
+                    <h3>Helping users connect with therapists in a clear and supportive way.</h3>
+                    <p>
+                        Our mission is to guide users toward therapists who match their needs,
+                        preferences, and comfort level. We want every step, from exploration to
+                        booking, to feel simple, personalized, and supportive.
+                    </p>
+                </div>
+
+                <div class="about-panel" id="purpose">
+                    <span class="panel-badge">Our Purpose</span>
+                    <h3>Designing a platform built around comfort, simplicity, and trust.</h3>
+                    <p>
+                        Sukoon was created to help users explore therapist profiles, take a matching
+                        quiz, and book sessions with more confidence. The purpose of the platform is
+                        to make the process feel calmer, softer, and more approachable.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </div>
-<div class="about-card">
-    <h3>Our Vision</h3>
-    <p> Our vision is to make mental health support more accessible and less overwhelming for
-            everyone by offering simple digital tools and therapist discovery features.
-        </p>
-   </div>
-   </div>
-    </div>
- </section>
- <section class="mental-health">
-     <div class="container">
+</section>
+
+<section class="mental-health">
+    <div class="container">
         <div class="mental-content">
 
             <div class="mental-text">
                 <h2>Why Mental Health Matters</h2>
-                <p> Mental health is an important part of overall well-being. It affects how people think,
-            feel, manage stress, build relationships, and make decisions. Seeking support is a
-            positive step toward better balance, emotional strength, and healthier daily life. 
-        </p>
-        <p>At Sukoon, we believe that learning about mental health and finding support should be
-            easy, respectful, and stigma-free.
-        </p>
+                <p>
+                    Mental health is an important part of overall well-being. It affects how people
+                    think, feel, manage stress, build relationships, and make decisions. Seeking
+                    support is a positive step toward better balance, emotional strength, and
+                    healthier daily life.
+                </p>
+                <p>
+                    At Sukoon, we believe that learning about mental health and finding support
+                    should be easy, respectful, and stigma-free.
+                </p>
             </div>
 
             <div class="mental-box">
                 <h3>Support Starts With One Step</h3>
-                <p>  Small actions like exploring therapists, taking a quiz, or booking a session can be the
-            beginning of meaningful change.
-        </p>
+                <p>
+                    Small actions like exploring therapists, taking a quiz, or booking a session
+                    can be the beginning of meaningful change.
+                </p>
             </div>
+
         </div>
-     </div>
+    </div>
 </section>
 
 <section class="steps-section">
     <div class="container">
         <div class="section-heading">
             <h2>How Sukoon Works</h2>
-            <p>Our platform is designed to make the process simple and user-friendly. 
-            </p>
+            <p>Our platform is designed to make the process simple and user-friendly.</p>
         </div>
 
         <div class="steps-grid">
             <div class="step-card">
                 <div class="step-number">1</div>
                 <h3>Browse Therapists</h3>
-                <p>Explore therapist profiles, specialties, and experience to understand your options. 
-                </p>
+                <p>Explore therapist profiles, specialties, and experience to understand your options.</p>
             </div>
+
             <div class="step-card">
                 <div class="step-number">2</div>
-                <h3>Take The Quiz</h3>
-                <p>Answer a few questions to get matched with a therapist that fits your needs.
-                </p>
+                <h3>Take the Quiz</h3>
+                <p>Answer a few questions to get matched with a therapist that fits your needs.</p>
             </div>
-           
+
             <div class="step-card">
-                 <div class="step-number">3</div>
-                    <h3>Book a Session</h3>
-                    <p>Choose your therapist and schedule your preferred session easily.
-                    </p>
-                 </div>
+                <div class="step-number">3</div>
+                <h3>Book a Session</h3>
+                <p>Choose your therapist and schedule your preferred session easily.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -136,53 +173,55 @@
 <section class="disclaimer-section">
     <div class="container">
         <div class="disclaimer-box">
-        <h2>Disclaimer</h2>
-        <p>This website is a demo student project and is not a real medical or therapy platform.
-          The therapist information, booking system, and matching features are created for academic
-          and educational purposes only. 
-        </p>
+            <h2>Disclaimer</h2>
+            <p>
+                This website is a demo student project and is not a real medical or therapy platform.
+                The therapist information, booking system, and matching features are created for
+                academic and educational purposes only.
+            </p>
+        </div>
     </div>
-</div>
 </section>
 
 <section class="cta-section">
     <div class="container cta-content">
         <h2>Ready to Find the Right Therapist?</h2>
         <p>Take the quiz and discover the best therapist match for your needs.</p>
-            <a href="quiz.html" class="btn">Find Your Therapist</a>
+        <a href="quiz.html" class="btn">Find Your Therapist</a>
     </div>
 </section>
- <footer class="footer">
+
+<footer class="footer">
     <div class="container footer-grid">
-      <div class="footer-col">
-        <h3>Sukoon</h3>
-        <p>
-          A calm and accessible platform designed to help users connect with the
-          right therapist.
-        </p>
-      </div>
+        <div class="footer-col">
+            <h3>Sukoon</h3>
+            <p>
+                A calm and accessible platform designed to help users connect with the
+                right therapist.
+            </p>
+        </div>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About</a>
-        <a href="">Therapists</a>
-        <a href="">Contact</a>
-      </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="">Therapists</a>
+            <a href="">Contact</a>
+        </div>
 
-      <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p>Email: support@sukoon.com</p>
-        <p>Phone: +961 70 123 456</p>
-        <p>Location: Beirut, Lebanon</p>
-      </div>
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <p>Email: support@sukoon.com</p>
+            <p>Phone: +961 70 123 456</p>
+            <p>Location: Beirut, Lebanon</p>
+        </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 Sukoon. All rights reserved.</p>
+        <p>&copy; 2026 Sukoon. All rights reserved.</p>
     </div>
-  </footer>
-<script src="aboutus.js"></script>
-<script src="javascript_folder/main.js"></script>
+</footer>
+
+<script src="javascript_folder/aboutus.js"></script>
 </body>
 </html>
