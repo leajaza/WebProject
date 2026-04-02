@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Sukoon سكون</title>
+    <link rel="stylesheet" href="css_folder/style.css">
+    <link rel="stylesheet" href="css_folder/booking.css">
+     <script src="javascript_folder/main.js" defer></script>
+     <script src="javascript_folder/booking.js" defer></script>
+</head>
+
+<body>
+
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
+            <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="therapists.html">Therapists</a>
+            <a href="">Find Your Match</a>
+            <a href="booking.html">Booking</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle">
+            <img src="images/hamburger_icon.png" alt="Menu">
+        </button>
+
+    </div>
+</header>
+
+
+<section class="booking-heading">
+    <div class="container">
+        <span class="section-tag">Start Your Journey</span>
+        <h1>Book a Session</h1>
+        <p>Choose your therapist and schedule your session بسهولة وراحة.</p>
+    </div>
+</section>
+
+
+<section class="booking-section section-padding">
+    <div class="container">
+
+        <form id="bookingForm" class="booking-card">
+
+            
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+          
+            <div class="form-group">
+                <label for="therapist">Choose Therapist</label>
+                <select id="therapist" required>
+                    <option value="">Select Therapist</option>
+                    <option>Dr. Sarah Ahmed</option>
+                    <option>Dr. Omar Hassan</option>
+                    <option>Dr. Lina Kareem</option>
+                    <option>Dr. Maya Khoury</option>
+                    <option>Dr. Youssef Nader</option>
+                    <option>Dr. Rana Saleh</option>
+                </select>
+            </div>
+
+          
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+           
+            <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="sessionType">Session Type</label>
+                <select id="sessionType" required>
+                    <option value="">Select Type</option>
+                    <option>Online</option>
+                    <option>In-Person</option>
+                    <option>Online&In-Person</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <textarea id="notes" placeholder="Any additional information..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+
+            <!-- Confirmation -->
+            <p id="confirmationMessage" class="confirmation-message"></p>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <div class="footer-col">
+            <h3>Sukoon</h3>
+            <p>
+                A calm and accessible platform designed to help users connect with the
+                right therapist.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="therapists.html">Therapists</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <p>Email: support@sukoon.com</p>
+            <p>Phone: +961 70 123 456</p>
+            <p>Location: Beirut, Lebanon</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Sukoon. All rights reserved.</p>
+    </div>
+</footer>
+  
+</body>
+</html>
