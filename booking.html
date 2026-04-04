@@ -1,152 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Sukoon سكون</title>
-    <link rel="stylesheet" href="css_folder/style.css">
-    <link rel="stylesheet" href="css_folder/booking.css">
-     <script src="javascript_folder/main.js" defer></script>
-     <script src="javascript_folder/booking.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking | Sukoon سكون</title>
+  <link rel="stylesheet" href="css_folder/style.css" />
+  <link rel="stylesheet" href="css_folder/booking.css" />
+  <script src="javascript_folder/main.js" defer></script>
+  <script src="javascript_folder/booking.js" defer></script>
 </head>
-
 <body>
 
-
-<header class="navbar">
-    <div class="container nav-container">
-
-        <div class="logo">
-            <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
-            <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
-        </div>
-
-        <nav class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About</a>
-            <a href="therapists.html">Therapists</a>
-            <a href="">Find Your Match</a>
-            <a href="booking.html">Booking</a>
-            <a href="">Contact</a>
-        </nav>
-
-        <button class="menu-toggle" id="menuToggle">
-            <img src="images/hamburger_icon.png" alt="Menu">
-        </button>
-
-    </div>
-</header>
-
- <header class="navbar">
+  <header class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="images/logo.png" alt="Sukoon Logo" class="logo-img">
+        <img src="images/logo.png" alt="Sukoon Logo" class="logo-img" />
         <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
       </div>
+
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="aboutus.html">About</a>
         <a href="therapists.html">Therapists</a>
-        <a href="#">Find Your Match</a>
-        <a href="booking.html">Booking</a>
-        <a href="#">Contact</a>
+        <a href="">Find Your Match</a>
+        <a href="booking.html" class="active-link">Booking</a>
+        <a href="contact.html">Contact</a>
       </nav>
+
       <button class="menu-toggle" id="menuToggle">
-        <img src="images/hamburger_icon.png" alt="Click here">
+        <img src="images/hamburger_icon.png" alt="Menu" />
       </button>
     </div>
   </header>
 
-  <section class="booking-heading">
-  <h1>Book an Appointment</h1>
-  <p>Fill out your information, choose a therapist, session type, and date.</p>
-</section>
+  <section class="booking-hero">
+    <div class="container booking-hero-content">
+      <div class="booking-hero-text">
+  
+        <h1>Book Your Session with Ease</h1>
+        <p>
+          Choose your therapist, pick a session type, and reserve an available
+          time slot in just a few steps.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section class="booking-section">
-  <div class="booking-card">
-    <form id="bookingForm">
+  <section class="booking-section">
+    <div class="container booking-layout">
 
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your full name" required>
+      <div class="booking-left">
+        <div class="booking-card">
+          <div class="card-top">
+            <h2>Appointment Details</h2>
+            <p>Please fill in your information carefully.</p>
+          </div>
+
+          <form id="bookingForm">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="Enter your email address" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="therapist">Select Therapist</label>
+              <select id="therapist" required>
+                <option value="">Choose a therapist</option>
+                <option value="Dr. Omar Hassan">Dr. Omar Hassan</option>
+                <option value="Dr. Rana Saleh">Dr. Rana Saleh</option>
+                <option value="Dr. Sarah Ahmed">Dr. Sarah Ahmed</option>
+                <option value="Dr. Youssef Nader">Dr. Youssef Nader</option>
+                <option value="Dr. Hadi Nasr">Dr. Hadi Nasr</option>
+                <option value="Dr. Lina Kareem">Dr. Lina Kareem</option>
+               <option value="Dr. Maya Khoury">Dr. Maya Khoury</option>
+                <option value="Dr. Karim Saad">Dr.Karim Saad</option>
+              </select>
+            </div>
+
+            <div class="therapist-info" id="therapistInfo">
+              <div class="info-item">
+                <span>Experience</span>
+                <strong id="experience"></strong>
+              </div>
+              <div class="info-item">
+                <span>Location</span>
+                <strong id="location"></strong>
+              </div>
+              <div class="info-item">
+                <span>Session Fee</span>
+                <strong id="fee"></strong>
+              </div>
+              <div class="info-item">
+                <span>Session Types</span>
+                <strong id="types"></strong>
+              </div>
+              <div class="info-item">
+                <span>Available Days</span>
+                <strong id="days"></strong>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="sessionType">Session Type</label>
+                <select id="sessionType" required>
+                  <option value="">Select session type</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="date">Select Date</label>
+                <input type="date" id="date" required />
+              </div>
+            </div>
+
+            <div class="form-group time-group" id="timeGroup">
+              <label for="time">Select Time</label>
+              <select id="time" required>
+                <option value="">Select a time slot</option>
+              </select>
+            </div>
+
+            <div class="time-slots-note" id="slotMessage">
+              Select therapist, session type, and date to see available time slots.
+            </div>
+
+            <button type="submit" class="btn-book">Confirm Booking</button>
+
+            <div class="confirmation-message" id="confirmationMessage"></div>
+          </form>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email address" required>
-      </div>
+      <div class="booking-right">
+        <div class="summary-card">
+          <h3>Booking Summary</h3>
+          <p class="summary-subtext">Your selection will appear here.</p>
 
-      <div class="form-group">
-        <label for="therapist">Select Therapist</label>
-        <select id="therapist" required>
-          <option value="">Choose a therapist</option>
-          <option>Dr. Omar Hassan</option>
-          <option>Dr. Rana Saleh</option>
-          <option>Dr. Sarah Ahmed</option>
-          <option>Dr. Youssef Nader</option>
-        </select>
-      </div>
+          <div class="summary-box">
+            <div class="summary-row">
+              <span>Therapist</span>
+              <strong id="summaryTherapist">—</strong>
+            </div>
+            <div class="summary-row">
+              <span>Session Type</span>
+              <strong id="summaryType">—</strong>
+            </div>
+            <div class="summary-row">
+              <span>Date</span>
+              <strong id="summaryDate">—</strong>
+            </div>
+            <div class="summary-row">
+              <span>Time</span>
+              <strong id="summaryTime">—</strong>
+            </div>
+          </div>
 
-      <div class="therapist-info" id="therapistInfo">
-        <p><strong>Experience:</strong> <span id="experience"></span></p>
-        <p><strong>Location:</strong> <span id="location"></span></p>
-        <p><strong>Session Fee:</strong> <span id="fee"></span></p>
-        <p><strong>Session Type:</strong> <span id="types"></span></p>
-        <p><strong>Available Days:</strong> <span id="days"></span></p>
-      </div>
-
-      <div class="form-group">
-        <label for="sessionType">Session Type</label>
-        <select id="sessionType" required>
-          <option value="">Select session type</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="date">Select Date</label>
-        <input type="date" id="date" required>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Book Appointment</button>
-      <div class="confirmation-message" id="confirmationMessage"></div>
-
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container footer-grid">
-
-        <div class="footer-col">
-            <h3>Sukoon</h3>
+          <div class="summary-tip">
+            <h4>Reminder</h4>
             <p>
-                A calm and accessible platform designed to help users connect with the
-                right therapist.
+              Please arrive on time. Once a slot is booked, it becomes unavailable
+              for another client.
             </p>
+          </div>
         </div>
+      </div>
 
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About</a>
-            <a href="therapists.html">Therapists</a>
-            <a href="contact.html">Contact</a>
-        </div>
+    </div>
+  </section>
 
-        <div class="footer-col">
-            <h4>Contact Info</h4>
-            <p>Email: support@sukoon.com</p>
-            <p>Phone: +961 70 123 456</p>
-            <p>Location: Beirut, Lebanon</p>
-        </div>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Sukoon</h3>
+        <p>
+          A calm and accessible platform designed to help users connect with the
+          right therapist.
+        </p>
+      </div>
 
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="therapists.html">Therapists</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Email: support@sukoon.com</p>
+        <p>Phone: +961 70 123 456</p>
+        <p>Location: Beirut, Lebanon</p>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Sukoon. All rights reserved.</p>
+      <p>&copy; 2026 Sukoon. All rights reserved.</p>
     </div>
-</footer>
-  
+  </footer>
+
 </body>
 </html>
