@@ -114,7 +114,6 @@ const therapists = {
   }
 };
 
-// DOM elements
 const bookingForm = document.getElementById("bookingForm");
 const therapistSelect = document.getElementById("therapist");
 const sessionTypeSelect = document.getElementById("sessionType");
@@ -122,7 +121,7 @@ const dateInput = document.getElementById("date");
 const timeSelect = document.getElementById("time");
 const timeGroup = document.getElementById("timeGroup");
 
-// Info & summary
+
 const therapistInfo = document.getElementById("therapistInfo");
 const experienceSpan = document.getElementById("experience");
 const locationSpan = document.getElementById("location");
@@ -136,7 +135,7 @@ const summaryType = document.getElementById("summaryType");
 const summaryDate = document.getElementById("summaryDate");
 const summaryTime = document.getElementById("summaryTime");
 
-// Utilities
+
 function parseLocalDate(dateString){ const [y,m,d]=dateString.split("-").map(Number); return new Date(y,m-1,d);}
 function formatDateForDisplay(dateString){ if(!dateString) return "—"; return parseLocalDate(dateString).toLocaleDateString("en-GB",{ weekday:"short", day:"numeric", month:"short", year:"numeric" });}
 function getDayName(dateString){ return parseLocalDate(dateString).toLocaleDateString("en-US",{ weekday:"long" });}
@@ -150,7 +149,7 @@ function updateSummary(){
   summaryTime.textContent = timeSelect.value || "—";
 }
 
-// Reset slots
+
 function resetTimeSlots(message="Select therapist and date to see slots.") {
   timeSelect.innerHTML = `<option value="">Select a time slot</option>`;
   timeGroup.style.display="none";
@@ -158,7 +157,7 @@ function resetTimeSlots(message="Select therapist and date to see slots.") {
   updateSummary();
 }
 
-// Populate therapist info + session types
+
 function populateTherapistInfo(){
   const t = therapistSelect.value;
   confirmationMessage.textContent="";
@@ -181,13 +180,13 @@ function populateTherapistInfo(){
     sessionTypeSelect.appendChild(o);
   });
 
-  // Optional: auto-select first session type
+  
   if(th.sessionTypes.length>0) sessionTypeSelect.value=th.sessionTypes[0];
 
   updateAvailableSlots();
 }
 
-// Update available slots for selected day
+
 function updateAvailableSlots(){
   const t=therapistSelect.value, d=dateInput.value;
   if(!t||!d){ resetTimeSlots(); return;}
@@ -209,13 +208,13 @@ function updateAvailableSlots(){
   updateSummary();
 }
 
-// Set min date
+
 function setMinDate(){
   const today=new Date();
   dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split("T")[0];
 }
 
-// Handle booking submit
+
 bookingForm.addEventListener("submit", e=>{
   e.preventDefault();
   const name=document.getElementById("name").value.trim();
@@ -245,7 +244,6 @@ bookingForm.addEventListener("submit", e=>{
   setMinDate();
 });
 
-// Event listeners
 therapistSelect.addEventListener("change", populateTherapistInfo);
 sessionTypeSelect.addEventListener("change", updateAvailableSlots);
 dateInput.addEventListener("change", updateAvailableSlots);
