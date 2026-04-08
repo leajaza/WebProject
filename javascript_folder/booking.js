@@ -1,4 +1,4 @@
-const therapists = {
+let therapists = {
   "Dr. Omar Hassan": {
     experience: "10 years",
     location: "Beirut",
@@ -52,8 +52,7 @@ const therapists = {
       Tuesday: ["2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM","6:00 PM"],
       Wednesday: ["10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM","1:00 PM"],
       Thursday: ["1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM","5:00 PM"],
-      Friday: ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"],
-
+      Friday: ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 PM"]
     }
   },
   "Dr. Hadi Nasr": {
@@ -114,41 +113,62 @@ const therapists = {
   }
 };
 
-const bookingForm = document.getElementById("bookingForm");
-const therapistSelect = document.getElementById("therapist");
-const sessionTypeSelect = document.getElementById("sessionType");
-const dateInput = document.getElementById("date");
-const timeSelect = document.getElementById("time");
-const timeGroup = document.getElementById("timeGroup");
+let bookingForm = document.getElementById("bookingForm");
+let therapistSelect = document.getElementById("therapist");
+let sessionTypeSelect = document.getElementById("sessionType");
+let dateInput = document.getElementById("date");
+let timeSelect = document.getElementById("time");
+let timeGroup = document.getElementById("timeGroup");
 
+let therapistInfo = document.getElementById("therapistInfo");
+let experienceSpan = document.getElementById("experience");
+let locationSpan = document.getElementById("location");
+let feeSpan = document.getElementById("fee");
+let typesSpan = document.getElementById("types");
+let daysSpan = document.getElementById("days");
+let confirmationMessage = document.getElementById("confirmationMessage");
+let slotMessage = document.getElementById("slotMessage");
+let summaryTherapist = document.getElementById("summaryTherapist");
+let summaryType = document.getElementById("summaryType");
+let summaryDate = document.getElementById("summaryDate");
+let summaryTime = document.getElementById("summaryTime");
 
-const therapistInfo = document.getElementById("therapistInfo");
-const experienceSpan = document.getElementById("experience");
-const locationSpan = document.getElementById("location");
-const feeSpan = document.getElementById("fee");
-const typesSpan = document.getElementById("types");
-const daysSpan = document.getElementById("days");
-const confirmationMessage = document.getElementById("confirmationMessage");
-const slotMessage = document.getElementById("slotMessage");
-const summaryTherapist = document.getElementById("summaryTherapist");
-const summaryType = document.getElementById("summaryType");
-const summaryDate = document.getElementById("summaryDate");
-const summaryTime = document.getElementById("summaryTime");
+function parseLocalDate(dateString){
+  let [y,m,d]=dateString.split("-").map(Number);
+  return new Date(y,m-1,d);
+}
 
+function formatDateForDisplay(dateString){
+  if(!dateString) return "—";
+  return parseLocalDate(dateString).toLocaleDateString("en-GB",{ weekday:"short", day:"numeric", month:"short", year:"numeric" });
+}
 
-function parseLocalDate(dateString){ const [y,m,d]=dateString.split("-").map(Number); return new Date(y,m-1,d);}
-function formatDateForDisplay(dateString){ if(!dateString) return "—"; return parseLocalDate(dateString).toLocaleDateString("en-GB",{ weekday:"short", day:"numeric", month:"short", year:"numeric" });}
-function getDayName(dateString){ return parseLocalDate(dateString).toLocaleDateString("en-US",{ weekday:"long" });}
-function isPastDate(dateString){ const s=parseLocalDate(dateString); const t=new Date(); s.setHours(0,0,0,0); t.setHours(0,0,0,0); return s<t;}
-function getBookings(){ return JSON.parse(localStorage.getItem("sukoonBookings")) || []; }
-function saveBookings(bookings){ localStorage.setItem("sukoonBookings", JSON.stringify(bookings)); }
+function getDayName(dateString){
+  return parseLocalDate(dateString).toLocaleDateString("en-US",{ weekday:"long" });
+}
+
+function isPastDate(dateString){
+  let s=parseLocalDate(dateString);
+  let t=new Date();
+  s.setHours(0,0,0,0);
+  t.setHours(0,0,0,0);
+  return s<t;
+}
+
+function getBookings(){
+  return JSON.parse(localStorage.getItem("sukoonBookings")) || [];
+}
+
+function saveBookings(bookings){
+  localStorage.setItem("sukoonBookings", JSON.stringify(bookings));
+}
+
 function updateSummary(){
   summaryTherapist.textContent = therapistSelect.value || "—";
   summaryType.textContent = sessionTypeSelect.value || "—";
   summaryDate.textContent = dateInput.value ? formatDateForDisplay(dateInput.value) : "—";
   summaryTime.textContent = timeSelect.value || "—";
 }
-
 
 function resetTimeSlots(message="Select therapist and date to see slots.") {
   timeSelect.innerHTML = `<option value="">Select a time slot</option>`;
@@ -157,16 +177,18 @@ function resetTimeSlots(message="Select therapist and date to see slots.") {
   updateSummary();
 }
 
-
 function populateTherapistInfo(){
-  const t = therapistSelect.value;
+  let t = therapistSelect.value;
   confirmationMessage.textContent="";
   sessionTypeSelect.innerHTML = `<option value="">Select session type</option>`;
   resetTimeSlots();
 
-  if(!t || !therapists[t]){ therapistInfo.classList.remove("active"); return; }
+  if(!t || !therapists[t]){
+    therapistInfo.classList.remove("active");
+    return;
+  }
 
-  const th = therapists[t];
+  let th = therapists[t];
   experienceSpan.textContent = th.experience;
   locationSpan.textContent = th.location;
   feeSpan.textContent = th.fee;
@@ -175,67 +197,99 @@ function populateTherapistInfo(){
   therapistInfo.classList.add("active");
 
   th.sessionTypes.forEach(type=>{
-    const o = document.createElement("option");
+    let o = document.createElement("option");
     o.value=o.textContent=type;
     sessionTypeSelect.appendChild(o);
   });
 
-  
   if(th.sessionTypes.length>0) sessionTypeSelect.value=th.sessionTypes[0];
 
   updateAvailableSlots();
 }
 
-
 function updateAvailableSlots(){
-  const t=therapistSelect.value, d=dateInput.value;
+  let t=therapistSelect.value, d=dateInput.value;
   if(!t||!d){ resetTimeSlots(); return;}
   if(isPastDate(d)){ resetTimeSlots("Cannot book past date."); return;}
-  const th=therapists[t], day=getDayName(d);
-  if(!th.availableDays.includes(day)){ resetTimeSlots(`${t} not available on ${day}.`); return;}
-  const daySlots=th.slots[day] || [];
-  const bookings=getBookings().filter(b=>b.therapist===t && b.date===d).map(b=>b.time);
-  const available=daySlots.filter(s=>!bookings.includes(s));
-  if(available.length===0){ resetTimeSlots("No slots left for this date."); return;}
+
+  let th=therapists[t], day=getDayName(d);
+
+  if(!th.availableDays.includes(day)){
+    resetTimeSlots(`${t} not available on ${day}.`);
+    return;
+  }
+
+  let daySlots=th.slots[day] || [];
+  let bookings=getBookings().filter(b=>b.therapist===t && b.date===d).map(b=>b.time);
+  let available=daySlots.filter(s=>!bookings.includes(s));
+
+  if(available.length===0){
+    resetTimeSlots("No slots left for this date.");
+    return;
+  }
+
   timeSelect.innerHTML=`<option value="">Select a time slot</option>`;
   available.forEach(s=>{
-    const o=document.createElement("option");
+    let o=document.createElement("option");
     o.value=o.textContent=s;
     timeSelect.appendChild(o);
   });
+
   timeGroup.style.display="block";
   slotMessage.textContent=`${available.length} slot(s) available for ${day}.`;
   updateSummary();
 }
 
-
 function setMinDate(){
-  const today=new Date();
+  let today=new Date();
   dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split("T")[0];
 }
 
-
-bookingForm.addEventListener("submit", e=>{
+bookingForm.addEventListener("submit", function(e){
   e.preventDefault();
-  const name=document.getElementById("name").value.trim();
-  const email=document.getElementById("email").value.trim();
-  const therapist=therapistSelect.value;
-  const sessionType=sessionTypeSelect.value;
-  const date=dateInput.value;
-  const time=timeSelect.value;
-  confirmationMessage.style.color="#d64545"; confirmationMessage.textContent="";
-  if(!name||!email||!therapist||!sessionType||!date||!time){ confirmationMessage.textContent="Please complete all fields."; return;}
-  if(isPastDate(date)){ confirmationMessage.textContent="Cannot book past date."; return;}
-  const thDay=getDayName(date);
-  if(!therapists[therapist].availableDays.includes(thDay)){ confirmationMessage.textContent=`${therapist} not available on ${thDay}.`; resetTimeSlots(); return;}
-  const bookings=getBookings();
-  if(bookings.find(b=>b.therapist===therapist && b.date===date && b.time===time)){
-    confirmationMessage.textContent="Slot already booked."; updateAvailableSlots(); return;
+
+  let name=document.getElementById("name").value.trim();
+  let email=document.getElementById("email").value.trim();
+  let therapist=therapistSelect.value;
+  let sessionType=sessionTypeSelect.value;
+  let date=dateInput.value;
+  let time=timeSelect.value;
+
+  confirmationMessage.style.color="#d64545";
+  confirmationMessage.textContent="";
+
+  if(!name||!email||!therapist||!sessionType||!date||!time){
+    confirmationMessage.textContent="Please complete all fields.";
+    return;
   }
+
+  if(isPastDate(date)){
+    confirmationMessage.textContent="Cannot book past date.";
+    return;
+  }
+
+  let thDay=getDayName(date);
+
+  if(!therapists[therapist].availableDays.includes(thDay)){
+    confirmationMessage.textContent=`${therapist} not available on ${thDay}.`;
+    resetTimeSlots();
+    return;
+  }
+
+  let bookings=getBookings();
+
+  if(bookings.find(b=>b.therapist===therapist && b.date===date && b.time===time)){
+    confirmationMessage.textContent="Slot already booked.";
+    updateAvailableSlots();
+    return;
+  }
+
   bookings.push({name,email,therapist,sessionType,date,time});
   saveBookings(bookings);
+
   confirmationMessage.innerHTML=`Booking confirmed for <strong>${name}</strong><br>with <strong>${therapist}</strong><br>on <strong>${formatDateForDisplay(date)}</strong> at <strong>${time}</strong>.`;
   confirmationMessage.style.color="#2c5f8a";
+
   bookingForm.reset();
   therapistInfo.classList.remove("active");
   sessionTypeSelect.innerHTML=`<option value="">Select session type</option>`;
