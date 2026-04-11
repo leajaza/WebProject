@@ -1,0 +1,119 @@
+:root {
+    --primary-blue: #4a90e2;
+    --soft-blue: #7fb3d5;
+    --deep-blue: #2c5f8a;
+    --lavender: #a78bfa;
+    --teal: #5ec6b3;
+
+    --bg-main: #f4f9fc;
+    --bg-section: #eaf4fb;
+    --card-bg: #ffffff;
+
+    --text-dark: #1f2d3d;
+    --text-medium: #5a6b7b;
+    --border-light: #e5eaf0;
+
+    --gradient-primary: linear-gradient(135deg, #4a90e2, #a78bfa);
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --transition: 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-dark);
+}
+
+.contact-section {
+    padding: 80px 20px;
+    background: var(--bg-section);
+}
+
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h1 {
+    font-size: 36px;
+    color: var(--deep-blue);
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: var(--text-medium);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.info-box {
+    background: var(--bg-soft);
+    padding: 15px;
+    border-radius: var(--radius-md);
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: var(--deep-blue);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    outline: none;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-blue);
+}
+
+
+.contact-form button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
