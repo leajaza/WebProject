@@ -1,23 +1,3 @@
-:root {
-    --primary-blue: #4a90e2;
-    --soft-blue: #7fb3d5;
-    --deep-blue: #2c5f8a;
-    --lavender: #a78bfa;
-    --teal: #5ec6b3;
-
-    --bg-main: #f4f9fc;
-    --bg-section: #eaf4fb;
-    --card-bg: #ffffff;
-
-    --text-dark: #1f2d3d;
-    --text-medium: #5a6b7b;
-    --border-light: #e5eaf0;
-
-    --gradient-primary: linear-gradient(135deg, #4a90e2, #a78bfa);
-    --radius-lg: 24px;
-    --radius-md: 18px;
-    --transition: 0.3s ease;
-}
 
 body {
     margin: 0;
