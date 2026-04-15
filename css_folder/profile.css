@@ -206,3 +206,7 @@
     min-height: 280px;
   }
 }
+#learn-more{
+  scroll-margin-top: 90px;
+  scroll-behavior: smooth;
+}
