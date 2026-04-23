@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Your Match | Sukoon</title>
+
+<link rel="stylesheet" href="FYTH.CSS">
+<script src="FYTH.JS" defer></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-container">
+
+    <div class="logo">
+      <img src="images/logo.png" class="logo-img">
+      <span class="logo-text">Sukoon <span class="arabic">سكون</span></span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="therapists.html">Therapists</a>
+      <a href="findmatch.html" class="active">Find Your Match</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="container">
+
+  <div class="quiz-card">
+
+    <div id="progress">Question 1 of 3</div>
+
+    <h2 id="question"></h2>
+
+    <div id="options"></div>
+
+    <button id="nextBtn">Next</button>
+
+  </div>
+
+  <div id="resultBox" style="display:none;">
+    <h2>Your Top Matches</h2>
+    <div id="result"></div>
+  </div>
+
+</section>
+
+</body>
+</html>
