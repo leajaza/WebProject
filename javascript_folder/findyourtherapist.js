@@ -17,14 +17,14 @@ let questions = [
 ];
 
 let therapists = [
-  { name: "Dr. Sarah Ahmed", specialty: "Anxiety", gender: "Female", type: "both", image :"dr_hadi.png" },
-  { name: "Dr. Omar Hassan", specialty: "Family", gender: "Male", type: "both", image: "" },
-  { name: "Dr. Lina Kareem", specialty: "Depression", gender: "Female", type: "online", image: "images/therapist3.jpg" },
-  { name: "Dr. Maya Khoury", specialty: "Trauma", gender: "Female", type: "in-person", image: "images/therapist4.jpg" },
-  { name: "Dr. Youssef Nader", specialty: "Self-Esteem", gender: "Male", type: "online", image: "images/therapist5.jpg" },
-  { name: "Dr. Rana Saleh", specialty: "Stress", gender: "Female", type: "both", image: "images/therapist6.jpg" },
-  { name: "Dr. Karim Saad", specialty: "Couples", gender: "Male", type: "in-person", image: "images/therapist7.jpg" },
-  { name: "Dr. Hadi Nasr", specialty: "Stress", gender: "Male", type: "online", image: "images/therapist8.jpg" }
+  { name: "Dr. Sarah Ahmed", specialty: "Anxiety", gender: "Female", type: "both", image :"images/dr_sara.png" },
+  { name: "Dr. Omar Hassan", specialty: "Family", gender: "Male", type: "both", image: "images/dr_omar.png" },
+  { name: "Dr. Lina Kareem", specialty: "Depression", gender: "Female", type: "online", image: "images/dr_lina.png" },
+  { name: "Dr. Maya Khoury", specialty: "Trauma", gender: "Female", type: "in-person", image: "images/dr_maya.png" },
+  { name: "Dr. Youssef Nader", specialty: "Self-Esteem", gender: "Male", type: "online", image: "images/dr_youssef.png" },
+  { name: "Dr. Rana Saleh", specialty: "Stress", gender: "Female", type: "both", image: "images/dr_rana.png" },
+  { name: "Dr. Karim Saad", specialty: "Couples", gender: "Male", type: "in-person", image: "images/dr_karim.png" },
+  { name: "Dr. Hadi Nasr", specialty: "Stress", gender: "Male", type: "online", image: "images/dr_hadi.png" }
 ];
 
 let q = document.getElementById("question");
