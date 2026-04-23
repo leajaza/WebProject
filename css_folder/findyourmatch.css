@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f8fbff;
+  text-align: center;
+}
+
+
+.navbar {
+  background: #4a90e2;
+  padding: 15px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+
+.quiz-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+#progress {
+  color: #2c5f8a;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#question {
+  color: #2c5f8a;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #7fb3d5;
+  background: white;
+  color: #2c5f8a;
+  cursor: pointer;
+}
+
+.option-btn.selected {
+  background: #4a90e2;
+  color: white;
+}
+
+
+#nextBtn {
+  width: 100%;
+  padding: 12px;
+  background: #4a90e2;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+
+.card {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #cfe3ff;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.best {
+  border: 2px solid #4a90e2;
+}
+
+
+.bar {
+  height: 10px;
+  background: #e6f0ff;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.fill {
+  height: 100%;
+  background: #4a90e2;
+  border-radius: 10px;
+}
