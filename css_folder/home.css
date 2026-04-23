@@ -312,8 +312,8 @@
     width: 100%;
     min-height: 100vh;
     padding: 60px 20px;
-
-    background: url("../images/hero_background.png") no-repeat center center;
+background: url("../images/heromedium.png") no-repeat center/cover ;
+    
     background-size: cover;
   }
     .hero-text {
@@ -336,6 +336,7 @@
     .section-padding {
         padding: 70px 0;
     }
+  
 
 }
 
@@ -356,5 +357,8 @@
 
     .container {
         width: 92%;
+    }
+      .hero{
+background: url("../images/herosmall.png")no-repeat center center;
     }
 }
