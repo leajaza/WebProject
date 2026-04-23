@@ -359,6 +359,6 @@ background: url("../images/heromedium.png") no-repeat center/cover ;
         width: 92%;
     }
       .hero{
-background: url("../images/herosmall.png")no-repeat center center;
+background: url("../images/herosmall.png")no-repeat center/cover;
     }
 }
